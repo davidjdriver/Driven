@@ -1,0 +1,36 @@
+﻿<Window x:Class="ObserverExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:search="clr-namespace:ObserverExample.Search"
+        xmlns:tickerLookup="clr-namespace:ObserverExample.TickerLookup"
+        xmlns:tickerAudit="clr-namespace:ObserverExample.SearchLog"
+        xmlns:hardCoded="clr-namespace:ObserverExample.HardCodedChange"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <TabControl>
+            <TabControl.Items>
+                <TabItem Header="First Tab">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Border BorderThickness="5" BorderBrush="Black" Grid.Column="0">
+                            <search:Search Margin="5" />
+                        </Border>
+                        <Border BorderThickness="5" BorderBrush="Black" Grid.Column="1">
+                            <tickerLookup:TickerView Grid.Column="1" Margin="5"></tickerLookup:TickerView>
+                        </Border>
+                        <Border BorderThickness="5" BorderBrush="Black" Grid.Column="2">
+                            <tickerAudit:SearchLog Grid.Column="2"></tickerAudit:SearchLog>
+                        </Border>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Second Tab">
+                    <hardCoded:HardCodedChangeView></hardCoded:HardCodedChangeView>
+                </TabItem>
+            </TabControl.Items>
+        </TabControl>
+    </Grid>
+</Window>

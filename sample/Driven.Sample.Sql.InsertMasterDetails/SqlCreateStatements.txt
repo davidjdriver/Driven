@@ -1,0 +1,62 @@
+﻿CREATE TABLE dbo.Header(
+	HeaderKey INT IDENTITY(1,1) PRIMARY KEY
+	, SomeValue VARCHAR(50)
+	, OtherValue VARCHAR(50)
+	)
+
+CREATE TABLE dbo.LookupValue(
+	LookupValueKey INT IDENTITY(1,1) PRIMARY KEY
+	, LookupDescription VARCHAR(100)
+	)
+
+CREATE TABLE dbo.Detail(
+	DetailKey INT IDENTITY(1,1) PRIMARY KEY
+	, HeaderKey INT REFERENCES dbo.Header(HeaderKey)
+	, LookupValueKey INT REFERENCES dbo.LookupValue(LookupValueKey)
+	)
+
+INSERT dbo.LookupValue (LookupDescription)
+VALUES ('Lookup One'), ('Lookup Two'), ('Lookup Three'), ('Lookup Four'), ('Lookup Five')
+
+
+SELECT * FROM dbo.LookupValue
+
+CREATE TYPE dbo.LookupValueList AS TABLE (
+	LookupValueKey INT
+	)
+
+CREATE PROCEDURE dbo.InsertMasterDetail
+	@SomeValue VARCHAR(50)
+	, @OtherValue VARCHAR(50)
+	, @LookupValueList AS dbo.LookupValueList READONLY
+AS 
+	DECLARE @HeaderKey INT
+	INSERT dbo.Header(SomeValue, OtherValue)
+	VALUES (@SomeValue, @OtherValue)
+	SET @HeaderKey = SCOPE_IDENTITY();
+
+	INSERT dbo.Detail(HeaderKey, LookupValueKey)
+	SELECT @HeaderKey, LookupValueKey
+	FROM @LookupValueList
+
+	GO
+
+DECLARE @param AS dbo.LookupValueList
+INSERT @param(LookupValueKey) 
+VALUES (1), (2), (3), (4), (5)
+
+EXEC dbo.InsertMasterDetail 'Some Value', 'Other Value', @param
+
+SELECT * 
+FROM dbo.Header h
+JOIN  dbo.Detail d 
+ON d.HeaderKey = h.HeaderKey
+
+
+
+
+
+
+
+
+
