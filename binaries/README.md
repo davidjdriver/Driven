@@ -1,4 +1,4 @@
-Driven
+Driven\binaries
 =======
 
-It's a pun on my name. This is just a place for me to put stuff. If you like it, feel free to use it. Most of theses ideas are not unique to me. Some of them may be dated.
+A place to put binaries that are not mine or derived from this source code.
