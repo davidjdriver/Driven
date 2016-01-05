@@ -50,6 +50,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CBAE8C0A-B
 		test\README.md = test\README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driven.ElectronicFundsTransfer", "src\Driven.ElectronicFundsTransfer\Driven.ElectronicFundsTransfer.csproj", "{1E1AA986-128C-43F8-A07C-2ABC01CD16F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driven.ElectronicFundsTransfer.Test", "test\Driven.ElectronicFundsTransfer.Test\Driven.ElectronicFundsTransfer.Test.csproj", "{7AA2AAD3-A083-48B5-B793-FDB25B8DC046}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +68,14 @@ Global
 		{07979578-D8A0-4F55-B490-50AF618211CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07979578-D8A0-4F55-B490-50AF618211CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07979578-D8A0-4F55-B490-50AF618211CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E1AA986-128C-43F8-A07C-2ABC01CD16F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E1AA986-128C-43F8-A07C-2ABC01CD16F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E1AA986-128C-43F8-A07C-2ABC01CD16F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E1AA986-128C-43F8-A07C-2ABC01CD16F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AA2AAD3-A083-48B5-B793-FDB25B8DC046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AA2AAD3-A083-48B5-B793-FDB25B8DC046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AA2AAD3-A083-48B5-B793-FDB25B8DC046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AA2AAD3-A083-48B5-B793-FDB25B8DC046}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
