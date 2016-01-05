@@ -14,6 +14,36 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "binaries", "binaries", "{BE9FD73D-2399-49F2-BFA7-DE18D5A64703}"
+	ProjectSection(SolutionItems) = preProject
+		binaries\README.md = binaries\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{8553DA43-3896-4066-89BD-3AA974A2A07D}"
+	ProjectSection(SolutionItems) = preProject
+		build\README.md = build\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{90A07E09-6352-447E-AB5D-A30550AA038D}"
+	ProjectSection(SolutionItems) = preProject
+		docs\README.md = docs\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{6F880E32-695B-4BE2-A491-61C6E063AF4E}"
+	ProjectSection(SolutionItems) = preProject
+		img\Icon.jpg = img\Icon.jpg
+		img\README.md = img\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{2F3BCAC4-6683-4909-BA1F-37778452018F}"
+	ProjectSection(SolutionItems) = preProject
+		sample\README.md = sample\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F0A50B0F-6482-48D8-86D1-D20DE0B41A1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CBAE8C0A-BCAE-4F99-8297-11FAD37CE1E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +61,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BF82AA81-19CA-42B3-A41D-BA25B9EA3030} = {F0A50B0F-6482-48D8-86D1-D20DE0B41A1B}
+		{07979578-D8A0-4F55-B490-50AF618211CF} = {CBAE8C0A-BCAE-4F99-8297-11FAD37CE1E8}
 	EndGlobalSection
 EndGlobal
